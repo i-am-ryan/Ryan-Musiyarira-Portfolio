@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ryan Musiyarira | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ✅ Hero Section -->
+  <section id="hero">
+    <img src="assets/profile.jpg.jpeg" alt="Ryan Musiyarira" class="profile-img" />
+    <h1>Hello, I'm <span>Ryan Musiyarira</span></h1>
+    <p>Aspiring Cloud & Automation Specialist | Final-Year BSc Information Systems Student</p>
+  </section>
+
+  <!-- ✅ Header -->
+  <header>
+    <h1>Ryan Musiyarira</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="toggle-theme">🌙 Dark Mode</button>
+  </header>
+
+  <!-- ✅ About Section -->
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>Final-year Information Systems student at UJ passionate about cloud computing, DevOps, and solving real-world problems with technology.</p>
+    <p><strong>Location:</strong> Johannesburg, South Africa</p>
+    <p><strong>Email:</strong> Musiyariraryan96@gmail.com</p>
+    <p><strong>Phone:</strong> 0835913418</p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ryan-musiyarira-866ab22b5/" target="_blank">LinkedIn Profile</a></p>
+  </section>
+
+  <!-- ✅ Skills Section -->
+  <section id="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <h3>Languages</h3>
+    <ul>
+      <li>Python</li><li>Java</li><li>C#</li><li>HTML</li><li>CSS</li><li>JavaScript</li>
+    </ul>
+    <h3>Cloud & Tools</h3>
+    <ul>
+      <li>AWS (EC2, S3, VPC)</li>
+      <li>Flask, Git, GitHub, VS Code</li>
+      <li>CI/CD, Docker Basics</li>
+    </ul>
+    <h3>Soft Skills</h3>
+    <ul>
+      <li>Problem-Solving</li><li>Communication</li><li>Teamwork</li>
+    </ul>
+  </section>
+
+  <!-- ✅ Projects Section -->
+  <section id="projects" data-aos="fade-up" data-aos-delay="100">
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="https://github.com/i-am-ryan/Slot-Machine.git" target="_blank">Slot Machine (Python)</a></li>
+      <li><a href="https://github.com/i-am-ryan/Python-Automation-Projects.git" target="_blank">Python Automation Scripts</a></li>
+      <li>Academic cloud projects using AWS</li>
+    </ul>
+  </section>
+
+  <!-- ✅ Certifications Section -->
+  <section id="certifications" data-aos="fade-up">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Google IT Automation with Python</li>
+      <li>AWS Cloud Practitioner Essentials</li>
+      <li>Python for Data Science – IBM</li>
+      <li>Developing AI Apps with Flask</li>
+      <li><a href="https://github.com/i-am-ryan/Coursera-Certificates.git" target="_blank">Full certificate list (GitHub)</a></li>
+    </ul>
+  </section>
+
+  <!-- ✅ Contact Section -->
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:Musiyariraryan96@gmail.com">Musiyariraryan96@gmail.com</a></p>
+    <p>Phone: 0835913418</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/ryan-musiyarira-866ab22b5/" target="_blank">LinkedIn Profile</a></p>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer>
+    <p>&copy; 2025 Ryan Musiyarira</p>
+  </footer>
+
+  <!-- ✅ Smooth Scroll -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll("a[href^='#']").forEach(function(anchor) {
+        anchor.addEventListener("click", function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+          });
+        });
+      });
+    });
+
+    const toggle = document.getElementById("toggle-theme");
+    toggle.addEventListener("click", function() {
+      document.body.classList.toggle("dark-mode");
+      toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
+    });
+  </script>
+
+  <!-- ✅ AOS Animations -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>
